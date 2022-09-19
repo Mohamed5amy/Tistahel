@@ -1,0 +1,8 @@
+@use "./sass/index" as *;
+@use "./sass/pages";
+
+
+body {
+  background-color: $black !important;
+  color: $text-white;
+}

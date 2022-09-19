@@ -1,0 +1,179 @@
+@use "../layout/all" as *;
+
+
+.search.tour {
+  .search-box {
+    width: 70%;
+    justify-content: center;
+  }
+  p {
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.55);
+    font-family: Satisfy;
+    font-size: 40px;
+    text-transform: capitalize;
+    
+  }
+}
+
+.tour-program {
+  padding-top: $main-padding;
+  padding-bottom: 50px;
+  .container {
+    align-items: center;
+    justify-content: space-between;
+
+    .details {
+      h2 {margin-bottom: 30px;}
+
+      .lists {
+        display: flex;
+
+        .time{
+          padding-right: 30px;
+          border-right: 2px solid $text-gold;
+          margin-right: 20px;
+          li {
+            padding: 15px 0;
+            color: $text-gold;
+            font-size: 19px;
+            width: 100px;
+          }
+        }
+        .actions {
+          font-size: 19px;
+          li {
+            padding: 15px 0;
+            color: $text-white;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+
+    .image {
+      width: 600px;
+      img{max-width: 100%;}
+    }
+  }
+}
+
+.tour-details {
+  padding-top: 50px;
+  padding-bottom:50px;
+  .container {
+    .paragraph {
+      h4 {
+        font-size: 30px;
+        color: $text-white;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+      ul {
+        margin-bottom: 50px;
+        color: $text-white;
+        font-weight: 300;
+        font-size: 19px;
+
+        li {
+          padding: 5px 0;
+        }
+      }
+
+    }
+  }
+}
+
+.tour-form {
+  padding-bottom: $main-padding;
+  .container {
+    text-transform: uppercase;
+    h3 {
+      margin-bottom:35px;
+      font-size: 30px;
+      color: $text-gold;
+    }
+
+    form {
+      width: 85%;
+
+      .row {
+        display: flex;
+        justify-content: space-between;
+        gap: 70px;
+        margin-bottom: 30px;
+
+        input , select {
+          background-color: $black;
+          padding: 20px 30px;
+          border: 1px solid #363636;
+          flex: 1;
+          
+          &::placeholder {
+            color:#b5b5b5 ;
+            font-weight: 300;
+            font-size: 20px;
+          }
+        }
+        input {
+          color: $text-gold;
+          font-size: 20px;
+        }
+        select {
+          color: #b5b5b5;
+          text-transform: uppercase; 
+          font-size: 20px;
+          font-weight: 300;
+          outline: none;
+        }
+      }
+
+      .options {
+        margin-top: 20px;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        margin-bottom: 80px;
+
+        .image {
+          height: 100%;
+          padding: 10px 20px;
+          border: 3px solid transparent;
+          cursor: pointer;
+
+          &:hover {
+            border: 3px solid $text-gold;
+          }
+        }
+      }
+
+      button {
+        padding: 15px 100px;
+        text-transform: uppercase;
+        @include rad(16px);
+        background-color: $text-gold;
+        cursor: pointer;
+        color: $text-white;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 40px;
+
+        &:hover {
+          background-color: $gold;
+        }
+      }
+    }
+
+    .whats {
+      h3 {
+        font-size: 30px ;
+        color: $text-white;
+        margin-bottom: 10px;
+      }
+      h4 {
+        font-weight: 300;
+        font-size: 19px;
+        color: $text-white;
+      }
+    }
+  }
+}
