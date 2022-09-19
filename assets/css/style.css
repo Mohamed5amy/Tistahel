@@ -1478,6 +1478,54 @@ footer {
   background-color: #151515;
 }
 
+.air .container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 50px;
+  padding-bottom: 200px;
+}
+.air .container form select {
+  background-color: #000000;
+  color: #b5b5b5;
+  font-size: 16px;
+  padding: 20px 400px 20px 20px;
+  width: 50%;
+  text-transform: uppercase;
+  border: 1px solid #363636;
+}
+.air .container form select:focus {
+  border-color: #a57f49;
+}
+.air .container form p {
+  font-size: 22px;
+  font-weight: bold;
+  color: #a57f49;
+}
+.air .container form button {
+  color: #ffffff;
+  background-color: #a57f49;
+  font-weight: bold;
+  font-size: 22px;
+  padding: 12px 120px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8px, 1fr));
+  gap: 50px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.air .container form button:hover {
+  background-color: #dba961;
+}
+
 body {
   background-color: #000000 !important;
   color: #ffffff;
