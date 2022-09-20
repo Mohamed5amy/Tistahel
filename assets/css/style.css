@@ -1832,7 +1832,8 @@ footer {
   border: none;
   border-bottom: 1px solid #7c7c7c;
   background-color: #000000;
-  color: #dba961;
+  color: #7c7c7c;
+  font-size: 20px;
 }
 .profile-info .container .data-input select {
   text-transform: uppercase;
