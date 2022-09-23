@@ -179,3 +179,139 @@
     }
   }
 }
+
+
+
+@media (max-width:992px) {
+
+  .tour-program {
+
+    .container {
+      .image {
+        display: none;
+      }
+    }
+  }
+
+  .tour-details {
+
+    .container {
+      .paragraph {
+
+        padding-bottom: 20px;
+  
+        h4 {
+          font-size: 22px;
+        }
+        
+        ul {
+          font-size: 14px;
+  
+        }
+  
+      }
+    }
+  }
+
+  .tour-form {
+
+    .container {
+
+      h3 {
+        font-size: 22px;
+      }
+  
+      form {
+        width: 85%;
+  
+        .row {
+          flex-direction: column;
+          gap: 30px;
+        }
+  
+      }
+    }
+  }
+
+}
+
+@media (max-width:768px) {
+
+  .search.tour {
+    p {
+      font-size: 30px;
+    }
+  }
+
+  .tour-program {
+
+    .container {
+
+  
+      .details {
+  
+        .lists {
+  
+          .time{
+            padding-right: 10px;
+  
+            li {
+              font-size: 14px;
+            }
+          }
+          .actions {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .tour-form {
+    .container {
+      h3 {
+        font-size: 22px;
+      }
+  
+      form {
+  
+        .row {
+  
+          input , select {
+            padding: 10px 20px;
+
+            &::placeholder {
+              font-size: 15px;
+            }
+          }
+          input {
+            font-size: 15px;
+          }
+          select {
+            font-size: 15px;
+
+          }
+        }
+  
+        .options {
+          flex-direction: column;
+        }
+  
+        button {
+          padding: 15px 60px;
+          font-size: 16px;
+
+        }
+      }
+  
+      .whats {
+        h3 {
+          font-size: 25px ;
+        }
+        h4 {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

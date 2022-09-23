@@ -84,3 +84,17 @@
     }
   }
 }
+
+
+
+  // Small
+  @media (max-width: 768px) {
+    .landing.login {
+      .container {
+        height: 100vh;
+        .box {
+          padding: 50px 30px 100px;
+        }
+      }
+    }
+  }

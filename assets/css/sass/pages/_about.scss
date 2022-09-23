@@ -45,3 +45,52 @@
     }
   }
 }
+
+
+
+
+// Responsive 
+
+
+  // Medium 
+  @media (max-width: 992px) {
+
+    .search img {
+      object-position: 30%;
+    }
+
+    .paragraph {
+
+      .container {
+        text-align: center;
+        p {
+          font-size: 14px;
+          line-height: 1.7;
+        }
+      }
+    }
+    
+    .services {
+
+      .container {
+    
+        .box {
+    
+    
+          h3 {
+            font-size: 25px;
+          }
+    
+          p { 
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+  }
+
+  // Small
+  @media (max-width: 768px) {
+
+  }

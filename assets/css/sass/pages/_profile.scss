@@ -179,3 +179,61 @@
     }
   }
 }
+
+
+
+
+@media (max-width:992px) {
+
+}
+
+
+@media (max-width:768px) {
+
+  .profile-info {
+
+
+  
+    .container {
+      flex-direction: column;
+      gap: 50px;
+
+      .data , .data-input {
+        
+        flex-direction: column;
+        gap: 30px;
+  
+  
+        .row {
+
+  
+          span {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .fav {
+  
+    .container {
+      gap: 50px;
+  
+      .item {
+        gap: 30px;
+        flex-direction: column;
+        align-items: flex-start;
+  
+        h3 {
+          font-size: 25px;
+        }
+  
+        select {
+          width: 80%;
+        }
+      }
+    }
+  }
+
+}

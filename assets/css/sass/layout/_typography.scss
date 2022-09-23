@@ -18,3 +18,25 @@ p {
   font-weight: 300;
   text-transform: uppercase;
 }
+
+  // Small
+  @media (max-width: 768px) {
+
+    h1 {
+      font-size: 28px;
+    }
+    
+    h2 {
+      font-size: 24px;
+      color: $text-white;
+      text-transform: uppercase;  
+    }
+    
+    p {
+      font-size: 14px;
+      color: $text-white;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+
+  }

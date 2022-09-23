@@ -147,6 +147,11 @@ nav.payment {
     text-align: center;
 
     .image:not(:last-of-type) {margin-bottom: 50px;}
+
+    .image {
+      img{max-width: 100%;}
+    }
+    
     .text {
       font-size: 20px;
       line-height: 1.6;
@@ -160,4 +165,86 @@ nav.payment {
 
 footer {
   background-color: $black-15;
+}
+
+
+
+
+@media (max-width:992px) {
+  .landing.payment {
+  
+  
+    .container {
+      flex-direction: column;
+  
+      .form {
+        width: 80%;
+      }
+  
+      .info {
+        width: 80%;
+      }
+    }
+  }
+}
+
+
+@media (max-width:768px) {
+
+  nav.payment {
+
+    .btns {
+      gap: 10px;
+  
+      a:first-child {
+        font-size: 14px;
+      }
+  
+      a:last-child {
+        font-size: 12px;
+        padding: 10px 5px;
+        text-align: center;
+      }
+    }
+  }
+
+  .landing.payment {
+  
+  
+    .container {
+  
+      .form {
+        width: 100%;
+        
+  
+        h3 {
+          font-size: 28px;
+        }
+        form {
+  
+          label {
+            font-size: 13px;
+          }
+        }
+      }
+  
+      .info {
+        width: 100%;
+        padding: 25px;
+  
+        h3 {  
+          font-size: 16px;
+          margin-bottom: 20px;
+        }
+        li {
+          font-size: 13px;
+          margin-bottom: 20px;
+          font-weight: 300;
+        }
+        h4 {
+          font-size: 14px;
+        }
+      }
+    }
+  }
 }

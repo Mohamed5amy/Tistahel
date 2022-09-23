@@ -56,6 +56,32 @@
         </a>
       </ul>
 
+      <div class="menu" id="menu">
+
+        <a href="" class="list-item active">
+          <li>HOME</li>
+        </a>
+        <a href="pages/english/search.html" class="list-item">
+          <li>SEARCH TOUR</li>
+        </a>
+        <a href="" class="list-item">
+          <li>LOUNGES</li>
+        </a>
+        <a href="" class="list-item">
+          <li>ABOUT US</li>
+        </a>
+        <a href="" class="list-item">
+          <li>CONTACT US</li>
+        </a>
+        <a href="" class="list-item">
+          <li>PROFILE</li>
+        </a>
+    
+      </div>
+    
+      <div class="menu-btn" id="menu-btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
 
     </div>
   </nav>
@@ -411,6 +437,8 @@
 
 
   <!-- Scripts -->
+  <!-- Main js -->
+  <script src="assets/js/main.js"></script>
   <!-- Font Awesome -->
   <script src="assets/js/all.min.js"></script>
   <!-- Swiper JS -->
@@ -420,7 +448,7 @@
   <script>
     var swiper = new Swiper(".mySwiper", {
 
-      slidesPerView: "1.5",
+      slidesPerView: 1,
       spaceBetween: 0,
       pagination: {
         el: ".swiper-pagination",
@@ -442,13 +470,18 @@
         },
       speed:500,
       loop:true,
+      breakpoints: {
+          768: {
+            slidesPerView: 1.5,
+          },
+        },
     });
   </script> 
 
   <!-- Initialize Swiper 2 -->
   <script>
     var swiper = new Swiper(".mySwiper_explore", {
-      slidesPerView: 3.7,
+      slidesPerView: 1.5,
       spaceBetween: 10,
       loop:true,
       mousewheel: {
@@ -459,13 +492,24 @@
         delay: 5000,
         disableOnInteraction:false,
       },
+      breakpoints: {
+          768: {
+            slidesPerView: 2,
+          },
+          992: {
+            slidesPerView: 3,
+          },
+          1200: {
+            slidesPerView: 3.7,
+          },
+        },
     });
   </script>
 
   <!-- Initialize Swiper 3 -->
   <script>
     var swiper = new Swiper(".mySwiper_explore2", {
-      slidesPerView: 5,
+      slidesPerView: 2,
       spaceBetween: 10,
       loop:true,
       mousewheel: {
@@ -477,6 +521,17 @@
         disableOnInteraction:false,
         reverseDirection:true,
       },
+      breakpoints: {
+          768: {
+            slidesPerView: 3,
+          },
+          992: {
+            slidesPerView: 4,
+          },
+          1200: {
+            slidesPerView: 5,
+          },
+        },
     });
   </script>
 

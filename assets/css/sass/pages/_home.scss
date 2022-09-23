@@ -6,6 +6,7 @@
   position: absolute;
   top: 50px;
   right: 50px;
+  z-index: 1;
 
   .name {
     @include flex(center , center);
@@ -82,6 +83,53 @@ nav {
         }
       }
     }
+
+    .menu {
+      position: absolute;
+      top:  110%;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100vh;
+      background-color: $black;
+      clip-path: polygon(0 0, 100% 0, 60% 0, 40% 0);
+      z-index: 1000000;
+
+
+  a {
+    width: 100%;
+    width: 100%;
+    padding: 30px 40px;
+    font-size: 20px;
+    color: $text-white;
+    font-family: 'Changa';
+    font-weight: 600;
+
+    &:hover{
+      color: $text-gold;
+      background-color: $black-15;
+    }
+  }
+
+  &.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    }
+  
+    .menu-btn {
+      display: none;
+
+      svg {
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+
+        &:hover {
+          color: $gold;
+        }
+      }
+    }
   }
 }
 // landing Starts Here
@@ -93,7 +141,7 @@ nav {
     position: absolute;
     z-index: -100;
     width: 100%;
-    max-height: 100%;
+    height: 100%;
     object-fit: cover;
     top: 0;
     left: 0;
@@ -447,7 +495,7 @@ nav {
 
     form {
 
-      width: 50%;
+      width: fit-content;
       margin:50px auto 0;
       display: flex;
       flex-direction: column;
@@ -586,18 +634,325 @@ footer {
   }
 }
 
-// @keyframes bouncing {
-//   0%,10%,20%,50%,80%,100% {
-//       transform: translateY(0);
-//       -webkit-transform: translateY(0);
-//       -moz-transform: translateY(0);
-//       -ms-transform: translateY(0);
-//       -o-transform: translateY(0);
-// }   40%,60%{
-//   transform: translateX(10px);
-//   -webkit-transform: translateX(10px);
-//   -moz-transform: translateX(10px);
-//   -ms-transform: translateX(10px);
-//   -o-transform: translateX(10px);
-// }
-// }
+
+
+
+
+
+
+// Responsive 
+
+// Large
+  @media (max-width: 1200px) {
+    // User Starts Here
+    .user {
+      top: 10px;
+      right: 10px;
+
+      .name {
+
+        span {
+          font-size: 16px;
+        }
+      }
+    }
+
+    // nav Starts Here
+    nav { 
+      .container {
+
+        .list {
+          margin-right: 0px;
+          padding-top: 70px;
+        }
+      }
+    }
+
+    // Footer Starts Here 
+    footer {
+
+      .container {
+        flex-wrap: wrap;
+        gap: 50px;
+
+        .footer-list {
+          margin-top: 30px;
+          h4 {
+            font-weight: 400;
+            font-size: 18px;
+            margin-bottom: 40px;
+            letter-spacing: 2.57px;
+          }
+          ul li {
+            opacity: 0.4;
+            font-family: Manrope;
+            font-size: 14px;
+            padding: 10px 0;
+
+            &:hover {
+              color: $text-gold;
+              opacity: 1;
+            }
+          }
+        }
+
+        .footer-contact {
+          img {
+            margin-bottom: 40px;
+          }
+          p {
+            opacity: 70%;
+            font-size: 16px;
+            font-weight: normal;
+            margin-bottom: 60px;
+            line-height: 1.5;
+          }
+          span {
+            display: inline-block;
+            margin-bottom: 50px;
+            opacity: 40%;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 1.5;
+          }
+          h4 {
+            opacity: 0.4;
+            font-weight: normal;
+            margin-bottom: 30px;
+            font-size: 18px;
+          }
+          .social {
+            display: flex;
+            gap: 25px;
+            font-size: 20px;
+
+            a:hover {
+              color: $text-gold;
+            }
+          }
+
+        }
+      }
+    }
+
+
+  }
+
+  // Medium 
+  @media (max-width: 992px) {
+
+    .user {
+      display: none;
+    }
+    
+    // nav Starts Here
+    nav { 
+      position: absolute;
+      top: 0;
+      left: 50%;
+      @include center((-50%,0));
+      z-index: 1;
+
+      .container {
+
+        .logo {
+          padding-top: 50px;
+          img {
+            max-width: 60%;
+          }
+        }
+
+        .list {
+          display: none;
+        }
+    
+        .menu-btn {
+          margin-top: 50px;
+          display: block;
+        }
+      }
+    }
+  }
+
+  // Small
+  @media (max-width: 768px) {
+
+    nav { 
+      width: 90%;
+    }
+
+    // landing Starts Here
+    .landing {
+
+      > img {
+        position: absolute;
+        z-index: -100;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+
+      }
+
+      .container {
+        justify-content: center;
+        h1 {
+          text-align: center;
+        }
+      }
+    }
+
+    // Swiper Starts Here
+    .slider {
+      
+      .container {
+
+        .swiper-pagination-bullet {
+          background-color: $text-white;
+          width: 10px;
+          height: 10px;
+        }
+        
+        .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+          bottom: -40px;
+        }
+
+        .swiper {
+          .swiper-slide {
+
+            .content {
+              
+              .left {
+                padding-right: 10px;
+                border-right: 2px solid $text-white;
+                h2 {
+                  margin-bottom: 10px;
+                  font-size: 25px;
+                }
+                p {
+                  font-size: 16px;
+                }
+              }
+
+              .right {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Rose Starts Here
+    .rose {
+
+      .image {
+        height: 220px;
+
+        .head-info {
+          left: 20px;
+          bottom: 10px;
+
+          h2 {
+            font-size: 20px;
+          }
+        }
+      }
+
+      a.btn {
+        padding: 15px 30px;
+        font-size: 18px;
+
+      }
+    }
+
+    // Memberships Starts Here
+    .memberships {
+
+      .container {
+
+        > p {
+          font-size: 18px;
+        }
+
+        > h2 {
+          margin-bottom: 50px;
+        }
+
+        .boxes {
+
+          .box {
+
+
+            h3 {
+              font-size: 28px;
+              font-weight: bold;
+            }
+
+            h2 {
+              font-size: 40px;
+            }
+
+            ul {
+
+
+              li {
+                font-size: 14px;
+
+              }
+            }
+
+            a {
+
+
+              span {
+                font-size: 22px;
+
+              }
+
+            }
+          }
+        }
+      }
+    }
+
+    // Contact Starts Here
+    .contact {
+
+      .container {
+        .head-info {
+
+          p {
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: normal;
+          }
+        }
+
+        form {
+          width: 90%;
+
+
+          .row {
+            flex-direction: column;
+
+            input {
+              padding: 15px;
+              font-size: 18px;
+              &::placeholder {
+                font-size: 18px;
+              }
+            }
+          }
+
+          button[type='submit'] {
+            font-size: 18px;
+
+          }
+          
+        }
+      }
+    }
+
+  }

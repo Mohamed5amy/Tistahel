@@ -177,6 +177,24 @@ p {
   text-transform: uppercase;
 }
 
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+}
 .flex-cc {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -212,6 +230,7 @@ p {
   position: absolute;
   top: 50px;
   right: 50px;
+  z-index: 1;
 }
 .user .name {
   display: -webkit-box;
@@ -304,6 +323,52 @@ nav .container .list a.active, nav .container .list a:hover, nav .container .lis
 nav .container .list a.active::before, nav .container .list a:hover::before, nav .container .list a:focus::before {
   width: 80%;
 }
+nav .container .menu {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
+  -webkit-clip-path: polygon(0 0, 100% 0, 60% 0, 40% 0);
+          clip-path: polygon(0 0, 100% 0, 60% 0, 40% 0);
+  z-index: 1000000;
+}
+nav .container .menu a {
+  width: 100%;
+  width: 100%;
+  padding: 30px 40px;
+  font-size: 20px;
+  color: #ffffff;
+  font-family: "Changa";
+  font-weight: 600;
+}
+nav .container .menu a:hover {
+  color: #a57f49;
+  background-color: #151515;
+}
+nav .container .menu.active {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+nav .container .menu-btn {
+  display: none;
+}
+nav .container .menu-btn svg {
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+nav .container .menu-btn svg:hover {
+  color: #dba961;
+}
 
 .landing {
   position: relative;
@@ -313,7 +378,7 @@ nav .container .list a.active::before, nav .container .list a:hover::before, nav
   position: absolute;
   z-index: -100;
   width: 100%;
-  max-height: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   top: 0;
@@ -662,7 +727,9 @@ nav .container .list a.active::before, nav .container .list a:hover::before, nav
   width: 160px;
 }
 .contact .container form {
-  width: 50%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   margin: 50px auto 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -818,6 +885,228 @@ footer .container .footer-contact .social a:hover {
     -o-transform: translateX(10px);
   }
 }
+@media (max-width: 1200px) {
+  .user {
+    top: 10px;
+    right: 10px;
+  }
+  .user .name span {
+    font-size: 16px;
+  }
+
+  nav .container .list {
+    margin-right: 0px;
+    padding-top: 70px;
+  }
+
+  footer .container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 50px;
+  }
+  footer .container .footer-list {
+    margin-top: 30px;
+  }
+  footer .container .footer-list h4 {
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 40px;
+    letter-spacing: 2.57px;
+  }
+  footer .container .footer-list ul li {
+    opacity: 0.4;
+    font-family: Manrope;
+    font-size: 14px;
+    padding: 10px 0;
+  }
+  footer .container .footer-list ul li:hover {
+    color: #a57f49;
+    opacity: 1;
+  }
+  footer .container .footer-contact img {
+    margin-bottom: 40px;
+  }
+  footer .container .footer-contact p {
+    opacity: 70%;
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 60px;
+    line-height: 1.5;
+  }
+  footer .container .footer-contact span {
+    display: inline-block;
+    margin-bottom: 50px;
+    opacity: 40%;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.5;
+  }
+  footer .container .footer-contact h4 {
+    opacity: 0.4;
+    font-weight: normal;
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+  footer .container .footer-contact .social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 25px;
+    font-size: 20px;
+  }
+  footer .container .footer-contact .social a:hover {
+    color: #a57f49;
+  }
+}
+@media (max-width: 992px) {
+  .user {
+    display: none;
+  }
+
+  nav {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    z-index: 1;
+  }
+  nav .container .logo {
+    padding-top: 50px;
+  }
+  nav .container .logo img {
+    max-width: 60%;
+  }
+  nav .container .list {
+    display: none;
+  }
+  nav .container .menu-btn {
+    margin-top: 50px;
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  nav {
+    width: 90%;
+  }
+
+  .landing > img {
+    position: absolute;
+    z-index: -100;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    top: 0;
+    left: 0;
+  }
+  .landing .container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .landing .container h1 {
+    text-align: center;
+  }
+
+  .slider .container .swiper-pagination-bullet {
+    background-color: #ffffff;
+    width: 10px;
+    height: 10px;
+  }
+  .slider .container .swiper-horizontal > .swiper-pagination-bullets, .slider .container .swiper-pagination-bullets.swiper-pagination-horizontal, .slider .container .swiper-pagination-custom, .slider .container .swiper-pagination-fraction {
+    bottom: -40px;
+  }
+  .slider .container .swiper .swiper-slide .content .left {
+    padding-right: 10px;
+    border-right: 2px solid #ffffff;
+  }
+  .slider .container .swiper .swiper-slide .content .left h2 {
+    margin-bottom: 10px;
+    font-size: 25px;
+  }
+  .slider .container .swiper .swiper-slide .content .left p {
+    font-size: 16px;
+  }
+  .slider .container .swiper .swiper-slide .content .right {
+    display: none;
+  }
+
+  .rose .image {
+    height: 220px;
+  }
+  .rose .image .head-info {
+    left: 20px;
+    bottom: 10px;
+  }
+  .rose .image .head-info h2 {
+    font-size: 20px;
+  }
+  .rose a.btn {
+    padding: 15px 30px;
+    font-size: 18px;
+  }
+
+  .memberships .container > p {
+    font-size: 18px;
+  }
+  .memberships .container > h2 {
+    margin-bottom: 50px;
+  }
+  .memberships .container .boxes .box h3 {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .memberships .container .boxes .box h2 {
+    font-size: 40px;
+  }
+  .memberships .container .boxes .box ul li {
+    font-size: 14px;
+  }
+  .memberships .container .boxes .box a span {
+    font-size: 22px;
+  }
+
+  .contact .container .head-info p {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: normal;
+  }
+  .contact .container form {
+    width: 90%;
+  }
+  .contact .container form .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact .container form .row input {
+    padding: 15px;
+    font-size: 18px;
+  }
+  .contact .container form .row input::-webkit-input-placeholder {
+    font-size: 18px;
+  }
+  .contact .container form .row input::-moz-placeholder {
+    font-size: 18px;
+  }
+  .contact .container form .row input:-ms-input-placeholder {
+    font-size: 18px;
+  }
+  .contact .container form .row input::-ms-input-placeholder {
+    font-size: 18px;
+  }
+  .contact .container form .row input::placeholder {
+    font-size: 18px;
+  }
+  .contact .container form button[type=submit] {
+    font-size: 18px;
+  }
+}
 .landing.login .container {
   height: 130vh;
   -webkit-box-align: end;
@@ -924,6 +1213,14 @@ footer .container .footer-contact .social a:hover {
   margin-top: 10px;
 }
 
+@media (max-width: 768px) {
+  .landing.login .container {
+    height: 100vh;
+  }
+  .landing.login .container .box {
+    padding: 50px 30px 100px;
+  }
+}
 .search {
   width: 100%;
   height: 800px;
@@ -1032,7 +1329,7 @@ footer .container .footer-contact .social a:hover {
   overflow: hidden;
 }
 .places .container .box .image img {
-  max-width: 100%;
+  width: 100%;
   filter: grayscale(0.8);
   -webkit-filter: grayscale(0.8);
 }
@@ -1063,6 +1360,40 @@ footer .container .footer-contact .social a:hover {
   font-size: 22px;
 }
 
+@media (max-width: 992px) {
+  .search img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 0%;
+       object-position: 0%;
+  }
+  .search .container .search-box.searcho {
+    bottom: -55%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .search .container .search-box.searcho .counter {
+    padding: 20px 40px;
+  }
+  .search .container .search-box.searcho .counter .kind {
+    margin-right: 15px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+
+  .places {
+    padding-top: 200px;
+  }
+  .places .container {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 50px;
+  }
+}
 .search.tour .search-box {
   width: 70%;
   -webkit-box-pack: center;
@@ -1259,6 +1590,94 @@ footer .container .footer-contact .social a:hover {
   color: #ffffff;
 }
 
+@media (max-width: 992px) {
+  .tour-program .container .image {
+    display: none;
+  }
+
+  .tour-details .container .paragraph {
+    padding-bottom: 20px;
+  }
+  .tour-details .container .paragraph h4 {
+    font-size: 22px;
+  }
+  .tour-details .container .paragraph ul {
+    font-size: 14px;
+  }
+
+  .tour-form .container h3 {
+    font-size: 22px;
+  }
+  .tour-form .container form {
+    width: 85%;
+  }
+  .tour-form .container form .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .search.tour p {
+    font-size: 30px;
+  }
+
+  .tour-program .container .details .lists .time {
+    padding-right: 10px;
+  }
+  .tour-program .container .details .lists .time li {
+    font-size: 14px;
+  }
+  .tour-program .container .details .lists .actions {
+    font-size: 14px;
+  }
+
+  .tour-form .container h3 {
+    font-size: 22px;
+  }
+  .tour-form .container form .row input, .tour-form .container form .row select {
+    padding: 10px 20px;
+  }
+  .tour-form .container form .row input::-webkit-input-placeholder, .tour-form .container form .row select::-webkit-input-placeholder {
+    font-size: 15px;
+  }
+  .tour-form .container form .row input::-moz-placeholder, .tour-form .container form .row select::-moz-placeholder {
+    font-size: 15px;
+  }
+  .tour-form .container form .row input:-ms-input-placeholder, .tour-form .container form .row select:-ms-input-placeholder {
+    font-size: 15px;
+  }
+  .tour-form .container form .row input::-ms-input-placeholder, .tour-form .container form .row select::-ms-input-placeholder {
+    font-size: 15px;
+  }
+  .tour-form .container form .row input::placeholder, .tour-form .container form .row select::placeholder {
+    font-size: 15px;
+  }
+  .tour-form .container form .row input {
+    font-size: 15px;
+  }
+  .tour-form .container form .row select {
+    font-size: 15px;
+  }
+  .tour-form .container form .options {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .tour-form .container form button {
+    padding: 15px 60px;
+    font-size: 16px;
+  }
+  .tour-form .container .whats h3 {
+    font-size: 25px;
+  }
+  .tour-form .container .whats h4 {
+    font-size: 16px;
+  }
+}
 .paragraph {
   padding-bottom: 100px;
 }
@@ -1304,6 +1723,27 @@ footer .container .footer-contact .social a:hover {
   line-height: 1.7;
 }
 
+@media (max-width: 992px) {
+  .search img {
+    -o-object-position: 30%;
+       object-position: 30%;
+  }
+
+  .paragraph .container {
+    text-align: center;
+  }
+  .paragraph .container p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .services .container .box h3 {
+    font-size: 25px;
+  }
+  .services .container .box p {
+    font-size: 14px;
+  }
+}
 nav.payment .btns {
   padding-top: 35px;
   display: -webkit-box;
@@ -1465,6 +1905,9 @@ nav.payment .btns a:last-child:hover {
 .tail .container .image:not(:last-of-type) {
   margin-bottom: 50px;
 }
+.tail .container .image img {
+  max-width: 100%;
+}
 .tail .container .text {
   font-size: 20px;
   line-height: 1.6;
@@ -1478,6 +1921,59 @@ footer {
   background-color: #151515;
 }
 
+@media (max-width: 992px) {
+  .landing.payment .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .landing.payment .container .form {
+    width: 80%;
+  }
+  .landing.payment .container .info {
+    width: 80%;
+  }
+}
+@media (max-width: 768px) {
+  nav.payment .btns {
+    gap: 10px;
+  }
+  nav.payment .btns a:first-child {
+    font-size: 14px;
+  }
+  nav.payment .btns a:last-child {
+    font-size: 12px;
+    padding: 10px 5px;
+    text-align: center;
+  }
+
+  .landing.payment .container .form {
+    width: 100%;
+  }
+  .landing.payment .container .form h3 {
+    font-size: 28px;
+  }
+  .landing.payment .container .form form label {
+    font-size: 13px;
+  }
+  .landing.payment .container .info {
+    width: 100%;
+    padding: 25px;
+  }
+  .landing.payment .container .info h3 {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .landing.payment .container .info li {
+    font-size: 13px;
+    margin-bottom: 20px;
+    font-weight: 300;
+  }
+  .landing.payment .container .info h4 {
+    font-size: 14px;
+  }
+}
 .air .container form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1493,7 +1989,7 @@ footer {
   background-color: #000000;
   color: #b5b5b5;
   font-size: 16px;
-  padding: 20px 400px 20px 20px;
+  padding: 20px;
   width: 50%;
   text-transform: uppercase;
   border: 1px solid #363636;
@@ -1526,6 +2022,18 @@ footer {
   background-color: #dba961;
 }
 
+@media (max-width: 768px) {
+  .air .container form select {
+    width: 80%;
+  }
+  .air .container form p {
+    font-size: 18px;
+  }
+  .air .container form button {
+    font-size: 16px;
+    padding: 12px 60px;
+  }
+}
 .tour-program.lounge .container h3 {
   font-size: 30px;
   font-weight: bold;
@@ -1734,6 +2242,52 @@ footer {
   -webkit-filter: invert(1);
 }
 
+@media (max-width: 768px) {
+  .lounge-form .container form select, .lounge-form .container form input {
+    width: 90%;
+  }
+  .lounge-form .container form input[type=number]:first-of-type::-webkit-input-placeholder {
+    font-size: 14px;
+  }
+  .lounge-form .container form input[type=number]:first-of-type::-moz-placeholder {
+    font-size: 14px;
+  }
+  .lounge-form .container form input[type=number]:first-of-type:-ms-input-placeholder {
+    font-size: 14px;
+  }
+  .lounge-form .container form input[type=number]:first-of-type::-ms-input-placeholder {
+    font-size: 14px;
+  }
+  .lounge-form .container form input[type=number]:first-of-type::placeholder {
+    font-size: 14px;
+  }
+  .lounge-form .container form .quote {
+    padding: 20px 40px;
+  }
+  .lounge-form .container form .quote span {
+    font-size: 18px;
+  }
+  .lounge-form .container form .quote span.price {
+    font-size: 40px;
+  }
+  .lounge-form .container form h4 {
+    font-size: 22px;
+  }
+  .lounge-form .container form .check {
+    margin-bottom: 50px;
+  }
+  .lounge-form .container form .check input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+  }
+  .lounge-form .container form .check label {
+    font-size: 14px;
+  }
+  .lounge-form .container form button {
+    font-size: 16px;
+    padding: 15px 40px;
+  }
+}
 .landing.profile .container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1942,6 +2496,45 @@ footer {
   text-transform: uppercase;
 }
 
+@media (max-width: 768px) {
+  .profile-info .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 50px;
+  }
+  .profile-info .container .data, .profile-info .container .data-input {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 30px;
+  }
+  .profile-info .container .data .row span, .profile-info .container .data-input .row span {
+    font-size: 20px;
+  }
+
+  .fav .container {
+    gap: 50px;
+  }
+  .fav .container .item {
+    gap: 30px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .fav .container .item h3 {
+    font-size: 25px;
+  }
+  .fav .container .item select {
+    width: 80%;
+  }
+}
 .landing.packages .container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -2022,7 +2615,7 @@ footer {
 .package-list .container {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 50px;
 }
 .package-list .container .pack {
@@ -2063,6 +2656,8 @@ footer {
   margin-bottom: 50px;
 }
 .tail.packages .container > a {
+  z-index: 1;
+  position: relative;
   display: inline-block;
   font-size: 25px;
   text-transform: uppercase;
@@ -2081,8 +2676,43 @@ footer {
 }
 .tail.packages .container > a + .image {
   margin-top: -70px;
+  position: relative;
+  z-index: 0;
+}
+.tail.packages .container > a + .image img {
+  max-width: 100%;
 }
 
+@media (max-width: 768px) {
+  .landing.packages .container h1 {
+    font-size: 35px;
+  }
+  .landing.packages .container h2 {
+    font-size: 25px;
+  }
+  .landing.packages .container h3 {
+    font-size: 20px;
+  }
+  .landing.packages .container h4 {
+    font-size: 14px;
+  }
+
+  .festival-package .container p {
+    font-size: 16px;
+  }
+  .festival-package .container h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .festival-package .container h1 {
+    font-size: 50px;
+  }
+
+  .tail.packages .container > a {
+    font-size: 18px;
+    padding: 20px 10px;
+  }
+}
 body {
   background-color: #000000 !important;
   color: #ffffff;
