@@ -1,10 +1,11 @@
 @use "./sass/index" as *;
-@use "./sass/pages";
+@use "./sass/pages-ar";
 @use "./sass/layout/fonts";
 
 
 body {
   background-color: $black !important;
   color: $text-white;
-  font-family: 'Roboto', sans-serif;
+  direction: rtl;
+  font-family: 'Tajawal', sans-serif;
 }

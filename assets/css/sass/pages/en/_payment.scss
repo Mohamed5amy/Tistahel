@@ -1,0 +1,250 @@
+@use "../../layout/all" as *;
+
+nav.payment {
+
+  .btns {
+    padding-top: 35px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    a:first-child {
+      font-size: 16px;
+      font-family: Tajawal;
+
+      &:hover {
+        color: $text-gold;
+      }
+    }
+
+    a:last-child {
+      font-size: 14px;
+      padding: 15px 10px;
+      border: 1px solid $text-white;
+      @include rad(5px);
+      text-transform: uppercase;
+
+      &:hover {
+        background-color: $text-gold;
+        border-color: $text-gold;
+      }
+    }
+  }
+}
+
+.landing.payment {
+  height: auto;
+  padding-top: 300px;
+  padding-bottom: 150px;
+  background-color: $black-15;
+
+  > img {
+    opacity: .2;
+  }
+
+  .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    gap: 150px;
+    font-family: Montserrat;
+
+    .form {
+      text-transform: uppercase;
+      width: 40%;
+      
+
+      h3 {
+        font-size: 37px;
+        margin-bottom: 50px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          font-size: 13px;
+        }
+
+        input {
+          background-color: transparent;
+          padding: 5px 0;
+          border: none;
+          border-bottom: .5px solid #707070;
+          margin-bottom: 35px;
+          color: $text-gold;
+        }
+
+        h4 {
+          font-size: 13px ;
+          margin: 70px 0 30px;
+        }
+
+        .choice {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 15px;
+
+          input {
+            margin: 0;
+          }
+
+          &.check {
+            margin: 70px 0;
+            text-decoration: underline;
+          }
+        }
+
+        button {
+          width: fit-content;
+          padding: 20px 45px;
+          color: $text-gold;
+          border: 1px solid $text-gold;
+          background-color: transparent;
+          @include rad(5px);
+          cursor: pointer;
+
+          &:hover {
+            background-color: $text-gold;
+            color: $text-white;
+          }
+        }
+      }
+    }
+
+    .info {
+      width: 40%;
+      line-height: 1.4;
+      color: $text-gold;
+      padding: 25px 40px 25px 25px;
+      border: 2px solid $text-gold;
+      @include rad(13px);
+
+      h3 {  
+        font-size: 19px;
+        margin-bottom: 20px;
+      }
+      li {
+        font-size: 13px;
+        margin-bottom: 20px;
+        font-weight: 300;
+      }
+      h4 {
+        font-size: 15px;
+        & + li {
+          list-style: none;
+        }
+      }
+    }
+  }
+}
+
+.tail {
+  background-color: $black-15;
+  padding-bottom: 50px;
+  .container {
+    text-align: center;
+
+    .image:not(:last-of-type) {margin-bottom: 50px;}
+
+    .image {
+      img{max-width: 100%;}
+    }
+    
+    .text {
+      font-size: 20px;
+      line-height: 1.6;
+      margin-bottom: 40px;
+      span {
+        color: $text-gold;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: $black-15;
+}
+
+
+
+
+@media (max-width:992px) {
+  .landing.payment {
+  
+  
+    .container {
+      flex-direction: column;
+  
+      .form {
+        width: 80%;
+      }
+  
+      .info {
+        width: 80%;
+      }
+    }
+  }
+}
+
+
+@media (max-width:768px) {
+
+  nav.payment {
+
+    .btns {
+      gap: 10px;
+  
+      a:first-child {
+        font-size: 14px;
+      }
+  
+      a:last-child {
+        font-size: 12px;
+        padding: 10px 5px;
+        text-align: center;
+      }
+    }
+  }
+
+  .landing.payment {
+  
+  
+    .container {
+  
+      .form {
+        width: 100%;
+        
+  
+        h3 {
+          font-size: 28px;
+        }
+        form {
+  
+          label {
+            font-size: 13px;
+          }
+        }
+      }
+  
+      .info {
+        width: 100%;
+        padding: 25px;
+  
+        h3 {  
+          font-size: 16px;
+          margin-bottom: 20px;
+        }
+        li {
+          font-size: 13px;
+          margin-bottom: 20px;
+          font-weight: 300;
+        }
+        h4 {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

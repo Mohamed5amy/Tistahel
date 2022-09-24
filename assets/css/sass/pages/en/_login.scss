@@ -1,0 +1,100 @@
+@use "../../layout/all" as *;
+
+.landing.login {
+  .container {
+    height: 130vh;
+    align-items: flex-end;
+    .box {
+      background-color: $black;
+      padding: 100px 120px 150px;
+      text-align: center;
+    }
+    h3 {
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $text-white;
+      padding-bottom: 50px;
+    }
+    form {
+      input , select {
+        padding: 15px 0 ;
+        width: 100%;
+        max-width: 315px;
+        font-size: 15px;
+        text-align: center;
+        text-transform: uppercase;
+        background-color: $black;
+        outline: none;
+        border: 1px solid $text-gold;
+        margin-bottom: 100px;
+        caret-color: $gold;
+        color: $text-gold;
+        font-weight: 500;
+        &::placeholder {
+          color: $text-white;
+          font-weight: normal;
+        }
+        @include rad(5px);
+        &:focus {
+          border: 1px solid $gold;
+        }
+      }
+      select {
+        color: $text-white;
+        text-transform: uppercase;
+        font-weight: normal;
+      }
+      p {
+        font-size: 16px;
+        font-weight: normal;
+        color: $text-gold; 
+        margin-bottom: 70px;
+        a{color: $text-white; text-decoration: underline;}
+      }
+      button {
+        padding: 15px 0;
+        width: 100%;
+        max-width: 315px;
+        font-weight: 500;
+        background-color: $gold;
+        font-size: 15px;
+        text-transform: uppercase;
+        color: $text-white;
+        cursor: pointer;
+        @include rad(5px);
+        &:hover {
+          background-color: $text-gold;
+        }
+      }
+    }
+  }
+}
+
+.landing.sign-up {
+  .container {
+    form {
+      max-width: 315px;
+      input , select {
+        margin-bottom: 20px;
+      }
+      button {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+
+
+  // Small
+  @media (max-width: 768px) {
+    .landing.login {
+      .container {
+        height: 100vh;
+        .box {
+          padding: 50px 30px 100px;
+        }
+      }
+    }
+  }

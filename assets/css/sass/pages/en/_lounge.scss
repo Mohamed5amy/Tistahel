@@ -1,0 +1,267 @@
+@use "../../layout/all" as *;
+
+.tour-program.lounge {
+
+
+  .container {
+    h3 {
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .details {
+
+      .lists {
+
+        .time{
+          padding-right: 0;
+          border-right: none;
+          margin-right: 0;
+
+          li {
+            padding: 5px;
+            width: auto;
+            font-size: 19px;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+}
+
+.tour-details.lounge  {
+  padding-top: 0px;
+
+  .container {
+    .paragraph {
+      padding-bottom: 0;
+      margin-bottom: 35px;
+
+      h4 {margin-bottom: 0;}
+
+      ul {margin-bottom: 0px;}
+
+    }
+  }
+}
+
+
+.lounge-form {
+  .container {
+    form {
+
+      width: 100%;
+
+      h3 {
+        font-size: 25px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+      }
+
+      h3:last-of-type {
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 19px;
+        font-weight: 300;
+        color: $text-gold;
+        margin-bottom: 50px;
+      }
+
+      select , input {
+        background-color: $black;
+        color: #b5b5b5;
+        font-size: 16px;
+        padding: 20px;
+        width: 40%;
+        text-transform: uppercase;
+        border: 1px solid #363636;
+        margin-bottom: 30px;
+        display: block;
+        
+        
+      
+        &:focus {
+          border-color:$text-gold ;
+        }
+      }
+
+      select:first-of-type {
+        margin-bottom: 50px;
+      }
+
+      .date {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          display: block;
+          font-size: 15px;
+          color: $text-gold;
+          text-transform: uppercase;
+          margin-bottom: 10px;
+        }
+      }
+
+      input[type="number"]:first-of-type {
+
+        padding: 15px 20px;
+        background-color: $text-white;
+        @include rad(6px);
+        border: 1px solid $gold;
+        margin-bottom: 50px;
+        
+        
+        &::placeholder {
+          color: #6e6e6e;
+          font-size: 10px;
+          text-transform: none;
+        }
+      }
+
+      .quote{
+        padding: 16px 100px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $gold;
+        width: fit-content;
+        box-shadow: 5px 7.9px 3.6px 0 rgba(0, 0, 0, 0.08);
+        @include rad(5px);
+        margin-bottom: 100px;
+
+        span {
+          font-size: 21px;
+          font-weight: 300;
+
+          &.price {
+            font-size: 60px;
+            font-weight: bold;
+          }
+        }
+      }
+
+      h4 {
+        font-size: 30px;
+        font-weight: 500;
+        color: $text-gold;
+        text-transform: uppercase;
+        margin-bottom: 35px;
+      }
+
+      .check {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 100px;
+
+        input[type="checkbox"] {
+          padding: 0;
+          margin: 0;
+          width: 40px;
+          height: 33px;
+          
+
+
+          filter: invert(100%);
+          -webkit-filter: invert(100%);
+        }
+
+        label {
+          font-size: 22px;
+          font-weight: 300;
+          color: $text-gold;
+          text-transform: uppercase;
+        }
+      }
+
+      button {
+        text-transform: uppercase;
+        background-color: $text-gold;
+        font-weight: bold;
+        font-size: 22px;
+        padding: 20px 50px;
+        width: fit-content;
+        color: $text-white;
+        @include rad(8px);
+        cursor: pointer;
+        margin-bottom: 100px;
+
+        &:hover {
+          background-color: $gold;
+        }
+      }
+    }
+  }
+}
+
+
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  -webkit-filter: invert(1);
+}
+
+
+
+
+
+@media (max-width:768px) {
+  .lounge-form {
+    .container {
+      form {
+  
+        select , input {
+          width: 90%;
+        }
+  
+  
+        input[type="number"]:first-of-type {
+  
+          &::placeholder {
+            font-size: 14px;
+          }
+        }
+  
+        .quote{
+          padding: 20px 40px;
+
+          span {
+            font-size: 18px;
+  
+            &.price {
+              font-size: 40px;
+            }
+          }
+        }
+  
+        h4 {
+          font-size: 22px;
+        }
+  
+        .check {
+          margin-bottom: 50px;
+  
+          input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+          }
+  
+          label {
+            font-size: 14px;
+          }
+        }
+  
+        button {
+          font-size: 16px;
+          padding: 15px 40px;
+  
+        }
+      }
+    }
+  }
+  
+}

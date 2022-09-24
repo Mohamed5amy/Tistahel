@@ -228,7 +228,7 @@ p {
 .user {
   position: absolute;
   top: 50px;
-  right: 50px;
+  left: 50px;
   z-index: 1;
 }
 .user .name {
@@ -286,7 +286,7 @@ nav .container .list {
   display: flex;
   gap: 35px;
   padding-top: 50px;
-  margin-right: 150px;
+  margin-left: 150px;
 }
 nav .container .list a {
   color: #b5b5b5;
@@ -426,14 +426,14 @@ nav .container .menu-btn svg:hover {
 .slider .container .swiper .swiper-slide .content {
   position: absolute;
   bottom: 30px;
-  padding-left: 50px;
+  padding-right: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 .slider .container .swiper .swiper-slide .content .left {
-  padding-right: 30px;
-  border-right: 4px solid #ffffff;
+  padding-left: 30px;
+  border-left: 4px solid #ffffff;
 }
 .slider .container .swiper .swiper-slide .content .left h2 {
   margin-bottom: 15px;
@@ -443,7 +443,7 @@ nav .container .menu-btn svg:hover {
   font-size: 18px;
 }
 .slider .container .swiper .swiper-slide .content .right {
-  padding-left: 20px;
+  padding-right: 20px;
 }
 .slider .container .swiper .swiper-slide .content .right p {
   font-size: 18px;
@@ -469,7 +469,7 @@ nav .container .menu-btn svg:hover {
 .explore .row:first-child .swiper-slide h4 {
   position: absolute;
   bottom: 20px;
-  left: 25px;
+  right: 25px;
   color: #ffffff;
   z-index: 2;
   font-size: 26px;
@@ -508,7 +508,7 @@ nav .container .menu-btn svg:hover {
 .explore .row:last-child .swiper-slide img {
   position: absolute;
   top: 15px;
-  right: 15px;
+  left: 15px;
 }
 .explore .row:last-child .swiper-slide:hover img {
   filter: brightness(4);
@@ -538,7 +538,7 @@ nav .container .menu-btn svg:hover {
 }
 .rose .image .head-info {
   position: absolute;
-  left: 43px;
+  right: 43px;
   bottom: 20px;
   margin: 0;
 }
@@ -576,7 +576,7 @@ nav .container .menu-btn svg:hover {
   -webkit-animation: bouncing 3s linear infinite;
 }
 .rose a.btn img {
-  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .memberships {
@@ -803,8 +803,7 @@ footer .container .footer-list {
 footer .container .footer-list h4 {
   font-weight: 400;
   font-size: 18px;
-  margin-bottom: 40px;
-  letter-spacing: 2.57px;
+  margin-bottom: 20px;
 }
 footer .container .footer-list ul li {
   opacity: 0.4;
@@ -887,14 +886,14 @@ footer .container .footer-contact .social a:hover {
 @media (max-width: 1200px) {
   .user {
     top: 10px;
-    right: 10px;
+    left: 10px;
   }
   .user .name span {
     font-size: 16px;
   }
 
   nav .container .list {
-    margin-right: 0px;
+    margin-left: 0px;
     padding-top: 70px;
   }
 
@@ -909,8 +908,6 @@ footer .container .footer-contact .social a:hover {
   footer .container .footer-list h4 {
     font-weight: 400;
     font-size: 18px;
-    margin-bottom: 40px;
-    letter-spacing: 2.57px;
   }
   footer .container .footer-list ul li {
     opacity: 0.4;
@@ -2715,5 +2712,6 @@ footer {
 body {
   background-color: #000000 !important;
   color: #ffffff;
-  font-family: "Roboto", sans-serif;
+  direction: rtl;
+  font-family: "Tajawal", sans-serif;
 }

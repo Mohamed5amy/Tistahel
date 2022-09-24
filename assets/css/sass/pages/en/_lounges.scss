@@ -1,0 +1,78 @@
+@use "../../layout/all" as *;
+
+
+.air {
+  .container form {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-bottom: 200px;
+
+    select {
+      background-color: $black;
+      color: #b5b5b5 ;
+      font-size: 16px;
+      padding: 20px;
+      width: 50%;
+      text-transform: uppercase;
+      border: 1px solid #363636;
+
+      &:focus {
+        border-color:$text-gold ;
+      }
+    }
+
+    p {
+      font-size: 22px;
+      font-weight: bold;
+      color: $text-gold;
+    }
+
+    button {
+      color: $text-white;
+      background-color: $text-gold;
+      font-weight: bold;
+      font-size: 22px;
+      padding: 12px 120px ;
+      width: fit-content;
+      @include grid(8px);
+      text-transform: uppercase;
+      cursor: pointer;
+    
+
+      &:hover {
+        background-color: $gold;
+        
+      }
+    }
+
+  }
+}
+
+
+
+
+
+@media (max-width:768px) {
+  .air {
+    .container form {
+  
+      select {
+        width: 80%;
+  
+      }
+  
+      p {
+        font-size: 18px;
+
+      }
+  
+      button {
+        font-size: 16px;
+        padding: 12px 60px ;
+
+      }
+  
+    }
+  }
+}
