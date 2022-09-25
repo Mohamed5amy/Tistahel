@@ -195,7 +195,7 @@
 
   
     .container {
-      flex-direction: column;
+      
       gap: 50px;
 
       .data , .data-input {
@@ -205,11 +205,22 @@
   
   
         .row {
-
-  
           span {
             font-size: 20px;
           }
+          &:last-of-type {
+            .item {
+              gap: 10px;
+
+              .image {
+                img {
+                  width: 80%;
+                }
+              }
+            }
+          }
+
+          
         }
       }
     }

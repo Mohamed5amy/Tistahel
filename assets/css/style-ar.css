@@ -2587,10 +2587,6 @@ footer {
 
 @media (max-width: 768px) {
   .profile-info .container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     gap: 50px;
   }
   .profile-info .container .data, .profile-info .container .data-input {
@@ -2602,6 +2598,12 @@ footer {
   }
   .profile-info .container .data .row span, .profile-info .container .data-input .row span {
     font-size: 20px;
+  }
+  .profile-info .container .data .row:last-of-type .item, .profile-info .container .data-input .row:last-of-type .item {
+    gap: 10px;
+  }
+  .profile-info .container .data .row:last-of-type .item .image img, .profile-info .container .data-input .row:last-of-type .item .image img {
+    width: 80%;
   }
 
   .fav .container {
