@@ -26,6 +26,8 @@
     }
 
     .search-box {
+
+
       position: absolute;
       bottom: -20px;
       left: 50%;
@@ -45,6 +47,21 @@
         text-transform: uppercase;
         color: #b5b5b5;
         font-size: 20px;
+      }
+      select {
+        padding: 20px;
+      }
+
+      button{
+        background-color: $black;
+        color: #b5b5b5;
+        padding: 0 10px;
+        cursor: pointer;
+
+        &:hover {
+          color: $text-gold;
+        }
+        
       }
 
       .counter {
@@ -117,6 +134,17 @@
         h4 {
           color: $text-gold;
           font-size: 22px;
+        }
+        button {
+          text-transform: uppercase;
+          padding: 10px 15px;
+          @include rad(5px);
+          font-size: 14px;
+          cursor: pointer;
+          background-color: $text-gold;
+          &:hover {
+            background-color: $gold;
+          }
         }
       }
     }

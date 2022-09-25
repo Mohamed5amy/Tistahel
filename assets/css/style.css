@@ -368,6 +368,27 @@ nav .container .menu-btn svg {
 nav .container .menu-btn svg:hover {
   color: #dba961;
 }
+nav.scroll {
+  position: fixed;
+  z-index: 10000000000;
+  background-color: black;
+  padding: 50px 20px 30px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+nav.scroll .logo {
+  padding-top: 0px;
+}
+nav.scroll .logo img {
+  max-width: 50%;
+}
+nav.scroll .list {
+  padding-top: 0px;
+  margin-right: 0px;
+}
 
 .landing {
   position: relative;
@@ -897,6 +918,27 @@ footer .container .footer-contact .social a:hover {
     margin-right: 0px;
     padding-top: 70px;
   }
+  nav.scroll {
+    position: fixed;
+    z-index: 10000000000;
+    background-color: black;
+    padding: 50px 20px 30px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+  nav.scroll .logo {
+    padding-top: 0px;
+  }
+  nav.scroll .logo img {
+    max-width: 50%;
+  }
+  nav.scroll .list {
+    padding-top: 0px;
+    margin-right: 0px;
+  }
 
   footer .container {
     -ms-flex-wrap: wrap;
@@ -985,6 +1027,30 @@ footer .container .footer-contact .social a:hover {
   nav .container .menu-btn {
     margin-top: 50px;
     display: block;
+  }
+  nav.scroll {
+    position: fixed;
+    z-index: 10000000000;
+    background-color: black;
+    padding: 50px 20px 30px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+  nav.scroll .logo {
+    padding-top: 0px;
+  }
+  nav.scroll .logo img {
+    max-width: 50%;
+  }
+  nav.scroll .list {
+    padding-top: 0px;
+    margin-right: 0px;
+  }
+  nav.scroll .menu-btn {
+    margin-top: 0px;
   }
 }
 @media (max-width: 768px) {
@@ -1272,6 +1338,18 @@ footer .container .footer-contact .social a:hover {
   color: #b5b5b5;
   font-size: 20px;
 }
+.search .container .search-box select {
+  padding: 20px;
+}
+.search .container .search-box button {
+  background-color: #000000;
+  color: #b5b5b5;
+  padding: 0 10px;
+  cursor: pointer;
+}
+.search .container .search-box button:hover {
+  color: #a57f49;
+}
 .search .container .search-box .counter {
   padding: 20px 50px;
   border: 1px solid #363636;
@@ -1357,6 +1435,22 @@ footer .container .footer-contact .social a:hover {
 .places .container .box .content h4 {
   color: #a57f49;
   font-size: 22px;
+  margin-bottom: 10px;
+}
+.places .container .box .content button {
+  text-transform: uppercase;
+  padding: 10px 15px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #a57f49;
+}
+.places .container .box .content button:hover {
+  background-color: #dba961;
 }
 
 @media (max-width: 992px) {

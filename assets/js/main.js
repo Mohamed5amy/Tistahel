@@ -22,3 +22,15 @@ window.addEventListener("scroll", ()=> {
     menuBtn.innerHTML = `<i class="fa-solid fa-bars"></i>`
   }
 })
+
+// scroll nav 
+const nav = document.querySelector("nav")
+
+window.onscroll = () => {
+  if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
+    nav.classList.add("scroll")
+  }
+  else {
+    nav.classList.remove("scroll")
+  }
+}

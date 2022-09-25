@@ -131,6 +131,26 @@ nav {
       }
     }
   }
+
+  &.scroll {
+    position: fixed;
+    z-index: 10000000000;
+    background-color: black;
+    padding: 50px 20px 30px;
+    @include rad(10px);
+
+    .logo {
+      padding-top: 0px;
+      img {
+        max-width: 50%;
+      }
+    }
+
+    .list {
+      padding-top: 0px;
+      margin-left: 0px;
+    }
+  }
 }
 // landing Starts Here
 .landing {
@@ -666,6 +686,25 @@ footer {
           padding-top: 70px;
         }
       }
+      &.scroll {
+        position: fixed;
+        z-index: 10000000000;
+        background-color: black;
+        padding: 50px 20px 30px;
+        @include rad(10px);
+    
+        .logo {
+          padding-top: 0px;
+          img {
+            max-width: 50%;
+          }
+        }
+    
+        .list {
+          padding-top: 0px;
+          margin-right: 0px;
+        }
+      }
     }
 
     // Footer Starts Here 
@@ -767,6 +806,29 @@ footer {
         .menu-btn {
           margin-top: 50px;
           display: block;
+        }
+      }
+      &.scroll {
+        position: fixed;
+        z-index: 10000000000;
+        background-color: black;
+        padding: 50px 20px 30px;
+        @include rad(10px);
+    
+        .logo {
+          padding-top: 0px;
+          img {
+            max-width: 50%;
+          }
+        }
+    
+        .list {
+          padding-top: 0px;
+          margin-left: 0px;
+        }
+
+        .menu-btn {
+          margin-top: 0px;
         }
       }
     }
