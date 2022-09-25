@@ -84,9 +84,9 @@
           img {
             width: 100%;
             object-fit: cover;
-            height: 350px
+            height: 400px;
           }
-          @include rad(15px);
+          @include rad(1px);
         }
       }
     }

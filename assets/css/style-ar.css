@@ -1563,17 +1563,17 @@ footer .container .footer-contact .social a:hover {
 }
 .tour-program .container .swiper .swiper-wrapper .swiper-slide {
   overflow: hidden;
-  border-radius: 15px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
+  border-radius: 1px;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
 }
 .tour-program .container .swiper .swiper-wrapper .swiper-slide img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  height: 350px;
+  height: 400px;
 }
 
 .tour-details {
