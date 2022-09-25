@@ -18,8 +18,10 @@
 }
 
 .services {
+  
   padding-top:$main-padding;
   padding-bottom:$main-padding;
+
   .container {
     @include grid(350px);
     gap: 100px;

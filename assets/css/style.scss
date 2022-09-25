@@ -8,3 +8,8 @@ body {
   color: $text-white;
   font-family: 'Roboto', sans-serif;
 }
+
+body.arabic {
+  direction: rtl;
+  font-family: 'Tajawal', sans-serif;
+}

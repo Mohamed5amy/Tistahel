@@ -1545,6 +1545,34 @@ footer .container .footer-contact .social a:hover {
 .tour-program .container .image img {
   max-width: 100%;
 }
+.tour-program .container .swiper .swiper-button-next, .tour-program .container .swiper .swiper-button-prev {
+  color: #151515;
+  font-weight: bolder;
+}
+.tour-program .container .swiper .swiper-button-next:after, .tour-program .container .swiper .swiper-button-prev:after {
+  font-size: 35px;
+  font-weight: bolder;
+}
+.tour-program .container .swiper .swiper-pagination {
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+  font-family: "Bebas Neue", "Cairo";
+}
+.tour-program .container .swiper .swiper-wrapper .swiper-slide {
+  overflow: hidden;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.tour-program .container .swiper .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 350px;
+}
 
 .tour-details {
   padding-top: 50px;
@@ -1684,8 +1712,15 @@ footer .container .footer-contact .social a:hover {
 }
 
 @media (max-width: 992px) {
+  .tour-program .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 50px;
+  }
   .tour-program .container .image {
-    display: none;
+    width: 500px;
   }
 
   .tour-details .container .paragraph {
@@ -1725,6 +1760,13 @@ footer .container .footer-contact .social a:hover {
   }
   .tour-program .container .details .lists .actions {
     font-size: 14px;
+  }
+  .tour-program .container .image {
+    width: 350px;
+  }
+
+  .tour-program .container .swiper .swiper-wrapper .swiper-slide img {
+    height: auto;
   }
 
   .tour-form .container h3 {
@@ -2812,4 +2854,9 @@ body {
   background-color: #000000 !important;
   color: #ffffff;
   font-family: "Roboto", sans-serif;
+}
+
+body.arabic {
+  direction: rtl;
+  font-family: "Tajawal", sans-serif;
 }

@@ -18,6 +18,7 @@
 .tour-program {
   padding-top: $main-padding;
   padding-bottom: 50px;
+  
   .container {
     align-items: center;
     justify-content: space-between;
@@ -29,9 +30,9 @@
         display: flex;
 
         .time{
-          padding-right: 30px;
-          border-right: 2px solid $text-gold;
-          margin-right: 20px;
+          padding-left: 30px;
+          border-left: 2px solid $text-gold;
+          margin-left: 20px;
           li {
             padding: 15px 0;
             color: $text-gold;
@@ -51,8 +52,43 @@
     }
 
     .image {
+      @include rad(10px);
+      overflow: hidden;
       width: 600px;
       img{max-width: 100%;}
+    }
+
+    .swiper {
+        
+      .swiper-button-next, .swiper-button-prev {
+        color: $black-15;
+        font-weight: bolder;
+      }
+
+      .swiper-button-next:after, .swiper-button-prev:after {
+        font-size: 35px;
+        font-weight: bolder;
+    }
+
+      .swiper-pagination {
+        font-weight: 600;
+        font-size: 16px;
+        color: white;
+        font-family: "Bebas Neue", "Cairo";
+      }
+      
+      .swiper-wrapper {
+        .swiper-slide {
+          overflow: hidden;
+          
+          img {
+            width: 100%;
+            object-fit: cover;
+            height: 350px
+          }
+          @include rad(15px);
+        }
+      }
     }
   }
 }
@@ -187,8 +223,11 @@
   .tour-program {
 
     .container {
+      flex-direction: column;
+      gap: 50px;
+
       .image {
-        display: none;
+        width: 500px;
       }
     }
   }
@@ -264,9 +303,17 @@
           }
         }
       }
+
+      .image {
+        width: 350px;
+      }
     }
   }
 
+  .tour-program .container .swiper .swiper-wrapper .swiper-slide img {
+    height: auto;
+  }
+  
   .tour-form {
     .container {
       h3 {
