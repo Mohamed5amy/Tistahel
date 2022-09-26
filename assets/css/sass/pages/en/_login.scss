@@ -85,6 +85,68 @@
   }
 }
 
+.landing.code {
+  .container {
+    height: 130vh;
+    align-items: flex-end;
+    .box {
+      background-color: $black;
+      padding: 100px 120px 150px;
+      text-align: center;
+    }
+    h3 {
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $text-white;
+      padding-bottom: 50px;
+    }
+    form {
+      
+      input{
+        display: block;
+        margin: 0 auto 100px;
+        border: none;
+        padding: 0 0 10px 0;
+        width: 6ch;
+        background: repeating-linear-gradient(90deg, $text-gold 0 , $text-gold 1ch, transparent 0, transparent 1.5ch) 0 100%/ 10ch 2px no-repeat;
+        font: 5ch droid sans mono, consolas, monospace;
+        letter-spacing: 0.5ch;
+        color: $text-gold;
+        text-transform: uppercase; 
+        &::placeholder {
+          color: rgb(39, 39, 39);
+        }
+      }
+      input:focus{
+          outline: none;
+          
+      }
+      p {
+        font-size: 16px;
+        font-weight: normal;
+        color: $text-gold; 
+        margin-bottom: 70px;
+        a{color: $text-white; text-decoration: underline;}
+      }
+      button {
+        padding: 15px 0;
+        width: 100%;
+        max-width: 315px;
+        font-weight: 500;
+        background-color: $gold;
+        font-size: 15px;
+        text-transform: uppercase;
+        color: $text-white;
+        cursor: pointer;
+        @include rad(5px);
+        &:hover {
+          background-color: $text-gold;
+        }
+      }
+    }
+  }
+}
 
 
   // Small

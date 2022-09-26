@@ -1278,6 +1278,84 @@ footer .container .footer-contact .social a:hover {
   margin-top: 10px;
 }
 
+.landing.code .container {
+  height: 130vh;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.landing.code .container .box {
+  background-color: #000000;
+  padding: 100px 120px 150px;
+  text-align: center;
+}
+.landing.code .container h3 {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding-bottom: 50px;
+}
+.landing.code .container form input {
+  display: block;
+  margin: 0 auto 100px;
+  border: none;
+  padding: 0 0 10px 0;
+  width: 6ch;
+  background: repeating-linear-gradient(90deg, #a57f49 0, #a57f49 1ch, transparent 0, transparent 1.5ch) 0 100%/10ch 2px no-repeat;
+  font: 5ch droid sans mono, consolas, monospace;
+  letter-spacing: 0.5ch;
+  color: #a57f49;
+  text-transform: uppercase;
+}
+.landing.code .container form input::-webkit-input-placeholder {
+  color: rgb(39, 39, 39);
+}
+.landing.code .container form input::-moz-placeholder {
+  color: rgb(39, 39, 39);
+}
+.landing.code .container form input:-ms-input-placeholder {
+  color: rgb(39, 39, 39);
+}
+.landing.code .container form input::-ms-input-placeholder {
+  color: rgb(39, 39, 39);
+}
+.landing.code .container form input::placeholder {
+  color: rgb(39, 39, 39);
+}
+.landing.code .container form input:focus {
+  outline: none;
+}
+.landing.code .container form p {
+  font-size: 16px;
+  font-weight: normal;
+  color: #a57f49;
+  margin-bottom: 70px;
+}
+.landing.code .container form p a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+.landing.code .container form button {
+  padding: 15px 0;
+  width: 100%;
+  max-width: 315px;
+  font-weight: 500;
+  background-color: #dba961;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.landing.code .container form button:hover {
+  background-color: #a57f49;
+}
+
 @media (max-width: 768px) {
   .landing.login .container {
     height: 100vh;
@@ -1569,8 +1647,8 @@ footer .container .footer-contact .social a:hover {
 }
 .tour-program .container .swiper .swiper-wrapper .swiper-slide img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: fill;
+     object-fit: fill;
   height: 400px;
 }
 

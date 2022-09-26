@@ -84,13 +84,13 @@
   <!-- End Nav -->
 
   <!-- Start Landing -->
-  <div class="landing login" id="landing">
+  <div class="landing code" id="landing">
     <img src="../../assets/imgs/pictures/landing-background.png" alt="">
     <div class="container">
       <div class="box">
         <h3>اكتب الكود هنا</h3>
         <form action="">
-          <input id="code" type="number" placeholder="الكود">
+          <input id="code" type="text" pattern="\d*" maxlength="4" placeholder="code"  value='' required>
           <p><a href="sign-up.html">عمل حساب</a> اذا كنت لا تملك حساب</p>
           <button id="btn" type="submit" >دخول</button>
           <span id="alert" style="color: red; margin-top: 10px; display: none;" >من فضلك ادخل 4 ارقام</span>

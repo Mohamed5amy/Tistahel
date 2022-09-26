@@ -84,13 +84,13 @@
   <!-- End Nav -->
 
   <!-- Start Landing -->
-  <div class="landing login" id="landing">
+  <div class="landing code" id="landing">
     <img src="../../assets/imgs/pictures/landing-background.png" alt="">
     <div class="container">
       <div class="box">
         <h3>Write the code here</h3>
         <form action="">
-          <input id="code" type="number" placeholder="code" minlength="4" required>
+          <input id="code" type="text" pattern="\d*" maxlength="4" placeholder="code"  value='' required>
           <p><a href="sign-up.html">register</a> if you don’t have an account</p>
           <button id="btn" type="submit" >Login</button>
           <span id="alert" style="color: red; margin-top: 10px; display: none;" >PLEASE ENTER 4 NUMBERS</span>
