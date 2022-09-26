@@ -90,9 +90,10 @@
       <div class="box">
         <h3>Write the code here</h3>
         <form action="">
-          <input type="number" placeholder="code">
+          <input id="code" type="number" placeholder="code" minlength="4" required>
           <p><a href="sign-up.html">register</a> if you don’t have an account</p>
-          <button type="submit" >Login</button>
+          <button id="btn" type="submit" >Login</button>
+          <span id="alert" style="color: red; margin-top: 10px; display: none;" >PLEASE ENTER 4 NUMBERS</span>
         </form>
       </div>
     </div>
@@ -111,6 +112,23 @@
   <!-- Font Awesome -->
   <script src="../../assets/js/all.min.js"></script>
 
+  <script>
+    const btn = document.getElementById("btn")
+    const code = document.getElementById("code")
+    const alert = document.getElementById("alert")
+    
+    btn.addEventListener("click", (e) => {
+      
+      if(code.value.length !== 4 ) {
+        e.preventDefault()
+        alert.style.display = "block"
+      }
+    } )
+
+  </script>
+  
+  
+  
 </body>
 
 

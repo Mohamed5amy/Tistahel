@@ -90,9 +90,10 @@
       <div class="box">
         <h3>اكتب الكود هنا</h3>
         <form action="">
-          <input type="number" placeholder="الكود">
+          <input id="code" type="number" placeholder="الكود">
           <p><a href="sign-up.html">عمل حساب</a> اذا كنت لا تملك حساب</p>
-          <button type="submit" >دخول</button>
+          <button id="btn" type="submit" >دخول</button>
+          <span id="alert" style="color: red; margin-top: 10px; display: none;" >من فضلك ادخل 4 ارقام</span>
         </form>
       </div>
     </div>
@@ -110,6 +111,20 @@
   <script src="../../assets/js/main.js"></script>
   <!-- Font Awesome -->
   <script src="../../assets/js/all.min.js"></script>
+  <script>
+    const btn = document.getElementById("btn")
+    const code = document.getElementById("code")
+    const alert = document.getElementById("alert")
+    
+    btn.addEventListener("click", (e) => {
+      
+      if(code.value.length !== 4 ) {
+        e.preventDefault()
+        alert.style.display = "block"
+      }
+    } )
+
+  </script>
 
 </body>
 
