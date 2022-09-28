@@ -439,6 +439,7 @@ nav.scroll .list {
   -o-border-radius: 30px;
   overflow: hidden;
   position: relative;
+  height: 570px;
 }
 .slider .container .swiper .swiper-slide img {
   width: 100%;
@@ -995,6 +996,10 @@ footer .container .footer-contact .social a:hover {
   footer .container .footer-contact .social a:hover {
     color: #a57f49;
   }
+
+  .slider .container .swiper .swiper-slide {
+    height: 393px;
+  }
 }
 @media (max-width: 992px) {
   .user {
@@ -1048,6 +1053,10 @@ footer .container .footer-contact .social a:hover {
   }
   nav.scroll .menu-btn {
     margin-top: 0px;
+  }
+
+  .slider .container .swiper .swiper-slide {
+    height: auto;
   }
 }
 @media (max-width: 768px) {

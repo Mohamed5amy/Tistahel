@@ -195,10 +195,12 @@ nav {
         @include rad(30px);
         overflow: hidden;
         position: relative;
+        height: 570px;
 
         img {
           width: 100%;
-          height: auto;
+          min-height: 100%;
+          object-fit: fill;
         }
 
         .content {
@@ -774,6 +776,10 @@ footer {
       }
     }
 
+    .slider .container .swiper .swiper-slide {
+      height: 393px;
+    }
+
 
   }
 
@@ -833,6 +839,10 @@ footer {
           margin-top: 0px;
         }
       }
+    }
+
+    .slider .container .swiper .swiper-slide {
+      height: auto;
     }
   }
 
