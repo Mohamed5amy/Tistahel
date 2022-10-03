@@ -22,17 +22,38 @@
 
   <!-- Start User -->
   <div class="user">
-    <div class="name">
-      <span>TAMER</span>
-      <img src="assets/imgs/icons/user.png" alt="">
+    <div class="content">
+      <div class="name">
+        <span>TAMER</span>
+        <img src="assets/imgs/icons/user.png" alt="">
+      </div>
+      <h4>Festival basic</h4>
     </div>
-    <h4>Festival basic</h4>
+
+    <div class="profile-icon" id="profile-icon">
+      <img src="assets/imgs/icons/profile-icon.png" alt="">
+    </div>
+
+    <ul class="user-menu" id="user-menu">
+      <li><a href="">Profile</a></li>
+      <li><a href="">Sign Out</a></li>
+    </ul>
   </div>
   <!-- End User -->
 
   <!-- Start Nav -->
   <nav id="nav">
     <div class="container flex-sb">
+
+      <div class="icons">
+        <div class="icon">
+          <img src="assets/imgs/pictures/profile.jpg" alt="" id="profileToggle">
+          <ul id="profileList" >
+            <li><a href="">My Profile</a></li>
+            <li><a href="">Sign Out</a></li>
+          </ul>
+        </div>
+      </div>
 
       <a href="#" class="logo">
         <img src="assets/imgs/pictures/logo.png" alt="">
@@ -55,7 +76,7 @@
           <li>CONTACT US</li>
         </a>
         <a href="" class="list-item">
-          <li><i class="fa-solid fa-earth-americas"></i></li>
+          <li>العربية</li>
         </a>
       </ul>
 
@@ -79,12 +100,17 @@
         <a href="" class="list-item">
           <li>PROFILE</li>
         </a>
+        <a href="" class="list-item">
+          <li>ٍSIGN OUT</li>
+        </a>
     
       </div>
     
       <div class="menu-btn" id="menu-btn">
         <i class="fa-solid fa-bars"></i>
       </div>
+
+
 
     </div>
   </nav>
@@ -536,6 +562,23 @@
           },
         },
     });
+  </script>
+
+  <!-- Profile -->
+  <script>
+    const icon = document.getElementById("profile-icon")
+    const profileMenu = document.getElementById("user-menu")
+
+    icon.addEventListener("click" , () => {
+      profileMenu.classList.toggle("active")
+    })
+
+    const profileList= document.getElementById("profileList")
+    const profileToggle = document.getElementById("profileToggle")
+
+    profileToggle.addEventListener("click" , () => {
+      profileList.classList.toggle("active")
+    })
   </script>
 
 </body>

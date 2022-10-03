@@ -229,7 +229,52 @@ p {
   position: absolute;
   top: 50px;
   right: 50px;
-  z-index: 1;
+  z-index: 111111;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  min-width: 125px;
+}
+.user .user-menu {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background-color: #000000;
+  border: 2px solid #dba961;
+  padding: 0 5px;
+  width: 100%;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  display: none;
+}
+.user .user-menu.active {
+  display: block;
+}
+.user .user-menu li {
+  width: 100%;
+  display: inline-block;
+  padding: 10px 0px;
+  text-align: center;
+  cursor: pointer;
+}
+.user .user-menu li:hover {
+  color: red;
+}
+.user .user-menu li:first-of-type {
+  border-bottom: 1px solid #ddd;
+}
+.user .user-menu li:first-of-type:hover {
+  color: #dba961;
+}
+.user .profile-icon {
+  cursor: pointer;
 }
 .user .name {
   display: -webkit-box;
@@ -273,8 +318,68 @@ nav {
   -o-transform: translate(-50%, 0);
   z-index: 1;
 }
+nav .container .icons {
+  display: none;
+}
+nav .container .icons .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: relative;
+}
+nav .container .icons img {
+  max-width: 30px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
+}
+nav .container .icons ul {
+  position: absolute;
+  top: 110%;
+  background-color: #000000;
+  border: 2px solid #dba961;
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  display: none;
+  min-width: 100px;
+}
+nav .container .icons ul.active {
+  display: block;
+}
+nav .container .icons ul li {
+  display: block;
+  padding: 5px 0px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 12px;
+}
+nav .container .icons ul li:hover {
+  color: red;
+}
+nav .container .icons ul li:first-of-type {
+  border-bottom: 1px solid #ddd;
+}
+nav .container .icons ul li:first-of-type:hover {
+  color: #dba961;
+}
 nav .container .logo {
   padding-top: 70px;
+  text-align: center;
 }
 nav .container .logo img {
   max-width: 100%;
@@ -342,7 +447,6 @@ nav .container .menu {
 }
 nav .container .menu a {
   width: 100%;
-  width: 100%;
   padding: 30px 40px;
   font-size: 20px;
   color: #ffffff;
@@ -353,6 +457,9 @@ nav .container .menu a:hover {
   color: #a57f49;
   background-color: #151515;
 }
+nav .container .menu a:last-child:hover {
+  color: red;
+}
 nav .container .menu.active {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
@@ -361,7 +468,7 @@ nav .container .menu-btn {
   display: none;
 }
 nav .container .menu-btn svg {
-  font-size: 40px;
+  font-size: 30px;
   color: white;
   cursor: pointer;
 }
@@ -1022,24 +1129,31 @@ footer .container .footer-contact .social a:hover {
     -o-transform: translate(-50%, 0);
     z-index: 1;
   }
-  nav .container .logo {
+  nav .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
     padding-top: 50px;
   }
-  nav .container .logo img {
-    max-width: 60%;
+  nav .container .icons {
+    display: block;
+  }
+  nav .container .logo {
+    width: 160px;
+    padding-top: 0;
   }
   nav .container .list {
     display: none;
   }
   nav .container .menu-btn {
-    margin-top: 50px;
     display: block;
   }
   nav.scroll {
     position: fixed;
     z-index: 10000000000;
     background-color: black;
-    padding: 50px 20px 30px;
+    padding: 0px 20px 30px;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -1048,9 +1162,10 @@ footer .container .footer-contact .social a:hover {
   }
   nav.scroll .logo {
     padding-top: 0px;
+    width: 160px;
   }
   nav.scroll .logo img {
-    max-width: 50%;
+    max-width: 80%;
   }
   nav.scroll .list {
     padding-top: 0px;
@@ -1067,6 +1182,9 @@ footer .container .footer-contact .social a:hover {
 @media (max-width: 768px) {
   nav {
     width: 90%;
+  }
+  nav .container .logo {
+    width: 120px;
   }
 
   .landing > img {

@@ -6,7 +6,53 @@
   position: absolute;
   top: 50px;
   right: 50px;
-  z-index: 1;
+  z-index: 111111;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 125px;
+
+  .user-menu {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background-color: $black;
+    border: 2px solid $gold;
+    padding: 0 5px;
+    width: 100%;
+    @include rad(10px);
+    display: none;
+
+    &.active {
+      display: block;
+    }
+    
+    li {
+      width: 100%;
+      display: inline-block;
+      padding: 10px 0px;
+      text-align: center;
+      cursor: pointer;
+
+      &:hover {
+        color: red;
+      }
+
+      &:first-of-type {
+        border-bottom: 1px solid #ddd;
+        &:hover {
+          color: $gold;
+        }
+      }
+
+      
+      
+    }
+  }
+
+  .profile-icon{
+    cursor: pointer;
+  }
 
   .name {
     @include flex(center , center);
@@ -39,8 +85,62 @@ nav {
 
   .container {
 
+    .icons {
+      display: none;
+
+      .icon {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: flex-end ;
+        position: relative;
+      }
+
+      img {
+        max-width: 30px;
+        @include rad(50%);
+        cursor: pointer;
+      }
+
+      ul {
+        position: absolute;
+        top: 110%;
+        background-color: $black;
+        border: 2px solid $gold;
+        padding: 10px;
+        @include rad(10px);
+        display: none;
+        min-width: 100px;
+
+        &.active {
+          display: block;
+        }
+
+        li {
+          
+          display:block;
+          padding: 5px 0px;
+          text-align: center;
+          cursor: pointer;
+          font-size: 12px;
+
+          &:hover {
+            color: red;
+          }
+    
+          &:first-of-type {
+            border-bottom: 1px solid #ddd;
+            &:hover {
+              color: $gold;
+            }
+          }
+        }
+      }
+    }
+
     .logo {
       padding-top: 70px;
+      text-align: center;
       img {
         max-width: 100%;
         height: auto;
@@ -97,31 +197,34 @@ nav {
       z-index: 1000000;
 
 
-  a {
-    width: 100%;
-    width: 100%;
-    padding: 30px 40px;
-    font-size: 20px;
-    color: $text-white;
-    font-family: 'Changa';
-    font-weight: 600;
+      a {
+        width: 100%;
+        padding: 30px 40px;
+        font-size: 20px;
+        color: $text-white;
+        font-family: 'Changa';
+        font-weight: 600;
 
-    &:hover{
-      color: $text-gold;
-      background-color: $black-15;
-    }
-  }
+        &:hover{
+          color: $text-gold;
+          background-color: $black-15;
+        }
 
-  &.active {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
+        &:last-child:hover {
+          color: red;
+        }
+      }
+
+      &.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
     }
   
     .menu-btn {
       display: none;
 
       svg {
-        font-size: 40px;
+        font-size: 30px;
         color: white;
         cursor: pointer;
 
@@ -799,12 +902,16 @@ footer {
       z-index: 1;
 
       .container {
+        flex-direction: row-reverse;
+        padding-top: 50px;
+
+        .icons {
+          display: block;
+        }
 
         .logo {
-          padding-top: 50px;
-          img {
-            max-width: 60%;
-          }
+          width: 160px;
+          padding-top: 0;
         }
 
         .list {
@@ -812,7 +919,6 @@ footer {
         }
     
         .menu-btn {
-          margin-top: 50px;
           display: block;
         }
       }
@@ -820,13 +926,15 @@ footer {
         position: fixed;
         z-index: 10000000000;
         background-color: black;
-        padding: 50px 20px 30px;
+        padding: 0px 20px 30px;
         @include rad(10px);
     
         .logo {
           padding-top: 0px;
+          width: 160px;
+
           img {
-            max-width: 50%;
+            max-width: 80%;
           }
         }
     
@@ -851,6 +959,9 @@ footer {
 
     nav { 
       width: 90%;
+      .container .logo {
+        width: 120px;
+      }
     }
 
     // landing Starts Here

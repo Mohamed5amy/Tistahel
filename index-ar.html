@@ -22,17 +22,38 @@
 
   <!-- Start User -->
   <div class="user">
-    <div class="name">
-      <span>تامر</span>
-      <img src="assets/imgs/icons/user.png" alt="">
+    <div class="content">
+      <div class="name">
+        <span>تامر </span>
+        <img src="assets/imgs/icons/user.png" alt="">
+      </div>
+      <h4>ذهبية</h4>
     </div>
-    <h4> ذهبية </h4>
+
+    <div class="profile-icon" id="profile-icon">
+      <img src="assets/imgs/icons/profile-icon.png" alt="">
+    </div>
+
+    <ul class="user-menu" id="user-menu">
+      <li><a href="">الملف الشخصي</a></li>
+      <li><a href="">تسجيل الخروج</a></li>
+    </ul>
   </div>
   <!-- End User -->
 
   <!-- Start Nav -->
   <nav id="nav">
     <div class="container flex-sb">
+
+      <div class="icons">
+        <div class="icon">
+          <img src="assets/imgs/pictures/profile.jpg" alt="" id="profileToggle">
+          <ul id="profileList" >
+            <li><a href="">الملف الشخصي</a></li>
+            <li><a href="">تسجيل الخروج</a></li>
+          </ul>
+        </div>
+      </div>
 
       <a href="#" class="logo">
         <img src="assets/imgs/pictures/logo.png" alt="">
@@ -55,7 +76,7 @@
           <li> تواصل معنا</li>
         </a>
         <a href="" class="list-item">
-          <li><i class="fa-solid fa-earth-americas"></i></li>
+          ENGLISH
         </a>
       </ul>
 
@@ -78,6 +99,9 @@
         </a>
         <a href="" class="list-item">
           <li>الصفحة الشخصية</li>
+        </a>
+        <a href="" class="list-item">
+          <li>تسجيل الخروج</li>
         </a>
     
       </div>
@@ -551,6 +575,23 @@
         },
     });
   </script>
+
+    <!-- Profile -->
+    <script>
+      const icon = document.getElementById("profile-icon")
+      const profileMenu = document.getElementById("user-menu")
+  
+      icon.addEventListener("click" , () => {
+        profileMenu.classList.toggle("active")
+      })
+
+      const profileList= document.getElementById("profileList")
+      const profileToggle = document.getElementById("profileToggle")
+
+      profileToggle.addEventListener("click" , () => {
+        profileList.classList.toggle("active")
+      })
+    </script>
 
 </body>
 
