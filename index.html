@@ -47,6 +47,9 @@
 
       <div class="icons">
         <div class="icon">
+          <i class="fa-regular fa-bell"></i>
+        </div>
+        <div class="icon">
           <img src="assets/imgs/pictures/profile.jpg" alt="" id="profileToggle">
           <ul id="profileList" >
             <li><a href="">My Profile</a></li>
@@ -97,12 +100,18 @@
         <a href="" class="list-item">
           <li>CONTACT US</li>
         </a>
-        <a href="" class="list-item">
-          <li>PROFILE</li>
-        </a>
-        <a href="" class="list-item">
-          <li>ٍSIGN OUT</li>
-        </a>
+
+        <li class="list-item switch-item">
+          
+            <span>LANGUAGE</span>
+            <div class="switch">
+              <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
+              <label for="language-toggle"></label>
+              <span class="on">AR</span>
+              <span class="off">EN</span>
+            </div>
+          
+        </li>
     
       </div>
     
@@ -579,6 +588,9 @@
     profileToggle.addEventListener("click" , () => {
       profileList.classList.toggle("active")
     })
+
+
+
   </script>
 
 </body>

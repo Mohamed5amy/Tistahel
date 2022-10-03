@@ -320,6 +320,10 @@ nav {
 }
 nav .container .icons {
   display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
 }
 nav .container .icons .icon {
   display: -webkit-box;
@@ -376,6 +380,13 @@ nav .container .icons ul li:first-of-type {
 }
 nav .container .icons ul li:first-of-type:hover {
   color: #dba961;
+}
+nav .container .icons svg {
+  font-size: 25px;
+}
+nav .container .icons svg:hover {
+  color: #dba961;
+  cursor: pointer;
 }
 nav .container .logo {
   padding-top: 70px;
@@ -445,7 +456,23 @@ nav .container .menu {
           clip-path: polygon(0 0, 100% 0, 60% 0, 40% 0);
   z-index: 1000000;
 }
-nav .container .menu a {
+nav .container .menu .switch-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+}
+nav .container .menu .switch-item:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+nav .container .menu a, nav .container .menu > li {
   width: 100%;
   padding: 30px 40px;
   font-size: 20px;
@@ -453,12 +480,94 @@ nav .container .menu a {
   font-family: "Changa";
   font-weight: 600;
 }
-nav .container .menu a:hover {
+nav .container .menu a:hover, nav .container .menu > li:hover {
   color: #a57f49;
   background-color: #151515;
 }
-nav .container .menu a:last-child:hover {
-  color: red;
+nav .container .menu a .switch, nav .container .menu > li .switch {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+}
+nav .container .menu a .switch > span, nav .container .menu > li .switch > span {
+  position: absolute;
+  top: 11px;
+  pointer-events: none;
+  font-family: "Helvetica", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+  width: 50%;
+  text-align: center;
+}
+nav .container .menu a .switch input.check-toggle-round-flat:checked ~ .off, nav .container .menu > li .switch input.check-toggle-round-flat:checked ~ .off {
+  color: #dba961;
+}
+nav .container .menu a .switch input.check-toggle-round-flat:checked ~ .on, nav .container .menu > li .switch input.check-toggle-round-flat:checked ~ .on {
+  color: #fff;
+}
+nav .container .menu a .switch > span.on, nav .container .menu > li .switch > span.on {
+  left: 0;
+  padding-left: 2px;
+  color: #dba961;
+}
+nav .container .menu a .switch > span.off, nav .container .menu > li .switch > span.off {
+  right: 0;
+  padding-right: 4px;
+  color: #fff;
+}
+nav .container .menu a .switch .check-toggle, nav .container .menu > li .switch .check-toggle {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+nav .container .menu a .switch .check-toggle + label, nav .container .menu > li .switch .check-toggle + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+nav .container .menu a .switch input.check-toggle-round-flat + label, nav .container .menu > li .switch input.check-toggle-round-flat + label {
+  padding: 2px;
+  width: 97px;
+  height: 35px;
+  background-color: #a57f49;
+  border-radius: 60px;
+}
+nav .container .menu a .switch input.check-toggle-round-flat + label:before, nav .container .menu a .switch input.check-toggle-round-flat + label:after, nav .container .menu > li .switch input.check-toggle-round-flat + label:before, nav .container .menu > li .switch input.check-toggle-round-flat + label:after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+nav .container .menu a .switch input.check-toggle-round-flat + label:before, nav .container .menu > li .switch input.check-toggle-round-flat + label:before {
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  right: 2px;
+  background-color: #000000;
+  border-radius: 60px;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+}
+nav .container .menu a .switch input.check-toggle-round-flat + label:after, nav .container .menu > li .switch input.check-toggle-round-flat + label:after {
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  width: 48px;
+  background-color: #fff;
+  border-radius: 52px;
+  -webkit-transition: margin 0.2s;
+  transition: margin 0.2s;
+}
+nav .container .menu a .switch input.check-toggle-round-flat:checked + label:after, nav .container .menu > li .switch input.check-toggle-round-flat:checked + label:after {
+  margin-left: 41px;
 }
 nav .container .menu.active {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
@@ -1137,7 +1246,9 @@ footer .container .footer-contact .social a:hover {
     padding-top: 50px;
   }
   nav .container .icons {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   nav .container .logo {
     width: 160px;

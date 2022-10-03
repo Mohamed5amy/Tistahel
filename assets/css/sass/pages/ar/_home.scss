@@ -87,6 +87,8 @@ nav {
 
     .icons {
       display: none;
+      align-items: center;
+      gap: 10px;
 
       .icon {
         display: flex;
@@ -134,6 +136,14 @@ nav {
               color: $gold;
             }
           }
+        }
+      }
+
+      svg {
+        font-size: 25px;
+        &:hover {
+          color: $gold;
+          cursor: pointer;
         }
       }
     }
@@ -196,9 +206,19 @@ nav {
       clip-path: polygon(0 0, 100% 0, 60% 0, 40% 0);
       z-index: 1000000;
 
+      .switch-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        &:hover {
+          background-color: $black;
+          color: $text-white;
+        }
+      }
 
-      a {
-        width: 100%;
+
+      a , > li {
         width: 100%;
         padding: 30px 40px;
         font-size: 20px;
@@ -211,14 +231,115 @@ nav {
           background-color: $black-15;
         }
 
-        &:last-child:hover {
-          color: red;
-        }
-  }
+        // switch 
+        .switch {
+          position: relative;
+          display: inline-block;
+          margin: 0;
 
-  &.active {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
+        > span {
+          position: absolute;
+          top: 11px;
+          pointer-events: none;
+          font-family: 'Helvetica', Arial, sans-serif;
+          font-weight: bold;
+          font-size: 12px;
+          text-transform: uppercase;
+          text-shadow: 0 1px 0 rgba(0, 0, 0, .06);
+          width: 50%;
+          text-align: center;
+        }
+
+        input.check-toggle-round-flat:checked ~ .off {
+          color: $gold;
+        }
+
+        input.check-toggle-round-flat:checked ~ .on {
+          color: #fff;
+        }
+
+        > span.on {
+          left: 0;
+          padding-left: 2px;
+          color: $gold;
+        }
+
+        > span.off {
+          right: 0;
+          padding-right: 4px;
+          color: #fff;
+        }
+
+        .check-toggle {
+          position: absolute;
+          margin-left: -9999px;
+          visibility: hidden;
+        }
+
+        .check-toggle + label {
+          display: block;
+          position: relative;
+          cursor: pointer;
+          outline: none;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+
+        input.check-toggle-round-flat + label {
+          padding: 2px;
+          width: 97px;
+          height: 35px;
+          background-color: $text-gold;
+          -webkit-border-radius: 60px;
+          -moz-border-radius: 60px;
+          -ms-border-radius: 60px;
+          -o-border-radius: 60px;
+          border-radius: 60px;
+        }
+        input.check-toggle-round-flat + label:before, input.check-toggle-round-flat + label:after {
+          display: block;
+          position: absolute;
+          content: "";
+        }
+
+        input.check-toggle-round-flat + label:before {
+          top: 2px;
+          left: 2px;
+          bottom: 2px;
+          right: 2px;
+          background-color: $black;
+          @include rad(60px);
+        }
+        input.check-toggle-round-flat + label:after {
+          top: 4px;
+          left: 4px;
+          bottom: 4px;
+          width: 48px;
+          background-color: #fff;
+          -webkit-border-radius: 52px;
+          -moz-border-radius: 52px;
+          -ms-border-radius: 52px;
+          -o-border-radius: 52px;
+          border-radius: 52px;
+          -webkit-transition: margin 0.2s;
+          -moz-transition: margin 0.2s;
+          -o-transition: margin 0.2s;
+          transition: margin 0.2s;
+        }
+
+
+        input.check-toggle-round-flat:checked + label:after {
+          margin-left: 41px;
+        }
+        }
+
+      }
+
+      &.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
     }
   
     .menu-btn {
@@ -905,7 +1026,7 @@ footer {
         flex-direction: row-reverse;
 
         .icons {
-          display: block;
+          display: flex;
         }
 
         .logo {
