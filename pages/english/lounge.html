@@ -229,8 +229,8 @@
         <h3>No of passengers</h3>
         <p>If booking more than 9 passengers, please click <a href="">Here</a></p>
 
-        <input type="number" name="" placeholder="adults">
-        <input type="number" name="" placeholder="children">
+        <input type="number" name="" placeholder="adults" id="adultsNum">
+        <input type="number" name="" placeholder="children" id="childrenNum">
         <input type="number" name="" placeholder="infants">
 
         <div class="quote">
@@ -240,13 +240,110 @@
 
         <h4>Please enter passenger details</h4>
 
-        <select name="" id="">
-          <option value="mr" selected>mr</option>
-          <option value="ms">ms</option>
-        </select>
+          <div class="mems">
+            <div class="mem">
+              <select name="" id="">
+                <option value="mr" selected>mr</option>
+                <option value="ms">ms</option>
+                <option value="child">child</option>
+              </select>
+      
+              <input type="text" placeholder="First Name *" required>
+              <input type="text" placeholder="Last Name *" required>
+            </div>
+            <div class="mem">
+              <select name="" id="">
+                <option value="mr" selected>mr</option>
+                <option value="ms">ms</option>
+                <option value="child">child</option>
+              </select>
+      
+              <input type="text" placeholder="First Name *" required>
+              <input type="text" placeholder="Last Name *" required>
+            </div>
+            <div class="mem">
+              <select name="" id="">
+                <option value="mr" selected>mr</option>
+                <option value="ms">ms</option>
+                <option value="child">child</option>
+              </select>
+      
+              <input type="text" placeholder="First Name *" required>
+              <input type="text" placeholder="Last Name *" required>
+            </div>
+            <div class="mem">
+              <select name="" id="">
+                <option value="mr" selected>mr</option>
+                <option value="ms">ms</option>
+                <option value="child">child</option>
+              </select>
+      
+              <input type="text" placeholder="First Name *" required>
+              <input type="text" placeholder="Last Name *" required>
+            </div>
+            <div class="mem">
+              <select name="" id="">
+                <option value="mr" selected>mr</option>
+                <option value="ms">ms</option>
+                <option value="child">child</option>
+              </select>
+      
+              <input type="text" placeholder="First Name *" required>
+              <input type="text" placeholder="Last Name *" required>
+            </div>
+            <div class="mem">
+              <select name="" id="">
+                <option value="mr" selected>mr</option>
+                <option value="ms">ms</option>
+                <option value="child">child</option>
+              </select>
+      
+              <input type="text" placeholder="First Name *" required>
+              <input type="text" placeholder="Last Name *" required>
+            </div>
+            <div class="mem">
+              <select name="" id="">
+                <option value="mr" selected>mr</option>
+                <option value="ms">ms</option>
+                <option value="child">child</option>
+              </select>
+      
+              <input type="text" placeholder="First Name *" required>
+              <input type="text" placeholder="Last Name *" required>
+            </div>
+            <div class="mem">
+              <select name="" id="">
+                <option value="mr" selected>mr</option>
+                <option value="ms">ms</option>
+                <option value="child">child</option>
+              </select>
+      
+              <input type="text" placeholder="First Name *" required>
+              <input type="text" placeholder="Last Name *" required>
+            </div>
+            <div class="mem">
+              <select name="" id="">
+                <option value="mr" selected>mr</option>
+                <option value="ms">ms</option>
+                <option value="child">child</option>
+              </select>
+      
+              <input type="text" placeholder="First Name *" required>
+              <input type="text" placeholder="Last Name *" required>
+            </div>
+            <div class="mem">
+              <select name="" id="">
+                <option value="mr" selected>mr</option>
+                <option value="ms">ms</option>
+                <option value="child">child</option>
+              </select>
+      
+              <input type="text" placeholder="First Name *" required>
+              <input type="text" placeholder="Last Name *" required>
+            </div>
+          </div>
 
-        <input type="text" placeholder="First Name *" required>
-        <input type="text" placeholder="Last Name *" required>
+        <button id="addMem" type="button">ADD MEMBER</button>
 
         <div class="check">
           <input type="checkbox" name="" id="terms" required>
@@ -324,5 +421,44 @@
   <script src="../../assets/js/main.js" ></script>
   <!-- Font Awesome -->
   <script src="../../assets/js/all.min.js"></script>
+  <!-- Add Member -->
+  <script>
+    const addMem = document.getElementById("addMem")
+    const adultsNum = document.getElementById("adultsNum")
+    const childrenNum = document.getElementById("childrenNum")
+    const mems = Array.from(document.querySelectorAll(".mem"))
+    
+    
+    let adults = 0;
+    let children = 0;
+
+    adultsNum.addEventListener("change" , (e) => {
+      adults = Number(e.target.value);
+      let totalNum = adults + children;
+      console.log(totalNum)
+
+      for (let i = 0; i < totalNum; i++) {
+      mems[i].classList.add("active")
+      }
+
+    })
+
+    childrenNum.addEventListener("change" , (e) => {
+      children = Number(e.target.value);
+      let totalNum = adults + children;
+      console.log(totalNum)
+
+      for (let i = 0; i < totalNum; i++) {
+      mems[i].classList.add("active")
+      }
+
+    })
+
+    
+
+    
+
+    
+  </script>
 </body>
 </html>

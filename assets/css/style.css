@@ -2689,6 +2689,29 @@ footer {
 .lounge-form .container form button:hover {
   background-color: #dba961;
 }
+.lounge-form .container form .mems {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 50px;
+}
+.lounge-form .container form .mems .mem {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: none;
+}
+.lounge-form .container form .mems .mem.active {
+  display: block;
+}
+.lounge-form .container form .mems .mem input, .lounge-form .container form .mems .mem select {
+  width: 90%;
+  margin-bottom: 30px;
+}
+.lounge-form .container form .mems + button {
+  font-size: 14px;
+  margin-bottom: 30px;
+}
 
 ::-webkit-calendar-picker-indicator {
   filter: invert(1);
@@ -2739,6 +2762,12 @@ footer {
   .lounge-form .container form button {
     font-size: 16px;
     padding: 15px 40px;
+  }
+  .lounge-form .container form .mems {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 50px;
   }
 }
 .landing.profile .container {
